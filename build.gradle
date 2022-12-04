@@ -1,0 +1,24 @@
+plugins {
+	id 'java'
+  id 'application'
+}
+
+mainClassName = 'dev.lobophf.sample.SampleApplication'
+group = 'dev.lobophf'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+  implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
+}
+
+tasks.named('test') {
+}
+
+run{
+  args += 'first_arg'
+}
