@@ -1,6 +1,0 @@
-CREATE USER store_user WITH PASSWORD 'secret';
-CREATE DATABASE db_store;
-
-CREATE SEQUENCE sq_customer START 1 INCREMENT 1 OWNED BY tb_customer.id;
-
-CREATE TABLE tb_customer(id BIGINT UNIQUE, name VARCHAR(50) NOT NULL, cpf char(11) NOT NULL UNIQUE);
