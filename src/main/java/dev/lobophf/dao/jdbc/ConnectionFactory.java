@@ -25,8 +25,8 @@ public class ConnectionFactory {
 
   private static Connection initConnection() {
     try {
-      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/db_store",
-          "store_user", "secret");
+      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/ebac_store",
+          "ebac_user", "secret");
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }

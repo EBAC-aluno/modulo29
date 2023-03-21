@@ -54,19 +54,19 @@ public class ProductDAOTest {
   }
 
   @Test
-  public void should_Return_One_When_Product_modified() throws Exception {
+  public void should_Return_One_When_Product_changes() throws Exception {
     SideConnection.addProductToDatabase(product);
     Product product1 = new Product();
     product1.setCode(product.getCode());
     product1.setPrice(BigDecimal.valueOf(99.99));
-    product1.setDescription("modified product");
+    product1.setDescription("changed product");
 
     int result = productDAO.update(product1);
     Assertions.assertEquals(1, result);
   }
 
   @Test
-  public void should_Return_Set_of_Products() throws Exception {
+  public void should_Return_Set_Of_Products() throws Exception {
     ArrayList<Product> arrayListOfProducts = createSetOfProducts();
     arrayListOfProducts.forEach(p -> {
       try {
